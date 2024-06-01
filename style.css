@@ -20,9 +20,8 @@ body{
 
 }
 .hovered{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: black;
 }
-
 #btn-controls{
     display: flex;
     padding: 10px;
