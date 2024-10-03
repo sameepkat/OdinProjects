@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css">
+  </style>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <dialog class="container">
+    <h3>Insert Book Name</h3>
+    <div id="userInput">
+      <label for="bookInput">Title:</label>
+      <input type="text" name="book" id="bookInput" required></input>
+      <label for="authorInput">Author:</label>
+      <input type="text" name="author" id="authorInput"></input>
+      <label for="noOfPagesInput">No of Pages:</label>
+      <input type="number" name="noOfPages" id="noOfPagesInput"></input>
+      <label for="bookStatus">Status:</label>
+      <select id="bookStatus">
+        <option value="reading" selected>Reading</option>
+        <option value="on_hold">On Hold</option>
+        <option value="read">Read</option>
+      </select>
+    </div>
+    <div id="buttonDiv">
+      <button id="addButton">Add</button>
+    </div>
+    </div>
+    <div id="booksContainer">
+  </dialog>
+</body>
+
+</html>

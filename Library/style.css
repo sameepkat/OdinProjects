@@ -1,0 +1,35 @@
+html,
+body {
+  margin: none;
+  padding: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#addButton {
+  width: 10rem;
+}
+
+#userInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+#booksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.bookCards {
+  display: inline-block;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
