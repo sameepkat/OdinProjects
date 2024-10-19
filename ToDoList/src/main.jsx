@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import './Main.css'
+//import './styles.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

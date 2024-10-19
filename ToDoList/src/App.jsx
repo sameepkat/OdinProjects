@@ -1,44 +1,17 @@
-import React from "react";
-import { useState } from "react";
-import './Cards.css'
+import React, {useState} from "react";
+import TodoInput from './Components/TodoInput';
+import TodoList from './Components/TodoList';
+import Project from './Components/Projects'
+import Dialog from './Components/Dialog'
+import './styles.css';
 
-function Cards() {
-  return (
-      <div id="card">
-        This is a card 
-      </div>
-  );
-}
-
-
-function ToDoComponent() {
-  const [cards, setCards] = useState([]);
-
-  const addCard = () => {
-    setCards([...cards, {}]);
-  };
-  return (
-    <div>
-      <div id="cardsContainer">
-        {cards.map((card, index) => (
-          <Cards key={index} />
-        ))}
-      <button onClick={addCard} id="addBtn">
-      Add Project
-      </button>
-      </div>
+function App(){
+    return(
+    <div className="App">
+        <Project />
+        {/* <Dialog /> */}
     </div>
-  );
+    );
 }
 
-function Display() {
-  return (
-    <div>
-      <h1>ToDoApp</h1>
-      <hr />
-      <ToDoComponent />
-    </div>
-  );
-}
-
-export default Display;
+export default App;
