@@ -8,9 +8,6 @@ function Cards(){
     const addTodo = (todo) => {
         setTodos( prevTodos => [...prevTodos, todo]);
     };
-    useEffect(()=>{
-        console.log(todos);
-    }, [todos])
     const removeTodo = (index) => {
         const newTodos = todos.filter((_, i) => i!== index);
         setTodos(newTodos);

@@ -41,6 +41,7 @@
   .projectCard{
     width: 25em;
     height: 25em;
+    overflow-y: auto;
   }
 
   .addProject{
@@ -52,6 +53,7 @@
     display: flex;
     gap: 1em;
     flex-wrap: wrap;
+    overflow-y: auto;
   }
 
   .dialogBox{
@@ -64,7 +66,6 @@
     border: 1px dotted black;
   }
   .dialogBoxContainer{
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;

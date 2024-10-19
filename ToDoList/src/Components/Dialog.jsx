@@ -7,7 +7,6 @@ function inputDialog({closeDialog, returnData}) {
   const [priority, setPriority] = useState("");
 
   const addTask = () => {
-    console.log("Task Added");
     const toDo = {
       task,
       description,
