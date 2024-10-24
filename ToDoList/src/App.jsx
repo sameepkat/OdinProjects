@@ -6,10 +6,10 @@ import Dialog from './Components/Dialog'
 import './styles.css';
 
 function App(){
+
     return(
     <div className="App">
-        <Project />
-        {/* <Dialog /> */}
+        <Project/>
     </div>
     );
 }

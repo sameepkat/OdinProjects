@@ -1,12 +1,22 @@
 import React, {useEffect, useState} from "react";
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
+import App from "../App";
 
-function Cards(){
+function Cards({items}){
     const [todos, setTodos] = useState([]);
 
+    useEffect(()=>{
+        setTodos(items);
+        console.log(items);
+    }, []);
+
     const addTodo = (todo) => {
-        setTodos( prevTodos => [...prevTodos, todo]);
+        setTodos( prevTodos => {
+        const updatedTodos = [...prevTodos, todo];
+        localStorage.setItem('savedTodos', JSON.stringify(updatedTodos));
+        return updatedTodos;
+    });
     };
     const removeTodo = (index) => {
         const newTodos = todos.filter((_, i) => i!== index);
@@ -26,16 +36,17 @@ function ProjectBoard(){
     const addCard = () => {
         setCard([...card, {}]);
     }
+    const savedTodos = localStorage.getItem('savedTodos');
+    const parsedTodos = savedTodos ? JSON.parse(savedTodos) : [];
     return(
-        <div>
         <div className="ProjectCardContainer">
             {card.map((_, i) => (
-                <Cards key={i} />
-            ))}
+                <Cards key={i} items={parsedTodos}/>
+            ))
+            }
         <button
         onClick={addCard}
         className="addProject">Add Project</button>
-        </div>
         </div>
     )
 }
