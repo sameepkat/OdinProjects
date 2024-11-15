@@ -13,7 +13,7 @@
 .navBtn{
     display: inline-flex;
     height: 300px;
-    padding: 0.3rem;
+    padding: 1em;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
     cursor: pointer;
@@ -22,4 +22,39 @@
 
 img {
     cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+}
+
+#indicatorContainer{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.indicator{
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: background-color 0.3s;
+}
+
+.indicator.active{
+    background-color: #4CAF50;
+    opacity: 1;
+}
+
+#imgDisplay{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
 }
